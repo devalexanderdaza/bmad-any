@@ -1,0 +1,26 @@
+{
+  "name": "gfi",
+  "owner": {
+    "name": ""
+  },
+  "license": "",
+  "homepage": "",
+  "repository": "",
+  "keywords": [
+    "bmad"
+  ],
+  "plugins": [
+    {
+      "name": "gfi",
+      "source": "./",
+      "description": "Registers Graphify as an invocable BMAD workflow skill.",
+      "version": "0.1.0",
+      "author": {
+        "name": ""
+      },
+      "skills": [
+        "./graphify-integration"
+      ]
+    }
+  ]
+}
