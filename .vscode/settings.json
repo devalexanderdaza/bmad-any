@@ -1,0 +1,10 @@
+{
+    "chat.agentFilesLocations": {
+        ".agents": true
+    },
+    "terminal.integrated.allowMnemonics": true,
+    "terminal.integrated.copyOnSelection": true,
+    "terminal.integrated.enableImages": true,
+    "telemetry.feedback.enabled": false,
+    "github.copilot.chat.agent.autoFix": true
+}
