@@ -1,0 +1,99 @@
+# Environment & Configuration
+# Personal user overrides (not committed)
+_bmad/custom/**/*.user.toml
+_bmad/custom/*.user.toml
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+pip-wheel-metadata/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# IDE & Editor
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+.project
+.pydevproject
+.settings/
+*.sublime-project
+*.sublime-workspace
+
+# Build & Output
+_bmad-output/
+build/
+dist/
+*.egg-info/
+
+# Graph & Cache
+graphify-out/cache/
+*.json.bak
+.graphify-cache/
+
+# Temporary Files
+*.tmp
+*.temp
+*.log
+*.bak
+*~
+.~*
+*.orig
+
+# OS
+.DS_Store
+Thumbs.db
+.AppleDouble
+.LSOverride
+
+# Git
+.git/
+.gitkeep
+
+# Node (if used)
+node_modules/
+npm-debug.log
+yarn-error.log
+
+# Local development
+.env
+.env.local
+.env.*.local
+
+# Test Coverage
+.coverage
+htmlcov/
+.pytest_cache/
+.tox/
+
+# Virtual Environments (backup)
+.venv/
+.virtualenv/
+
+# IDE temporary folders
+.vscode/settings.json
+.idea/workspace.xml
