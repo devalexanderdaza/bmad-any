@@ -1,0 +1,29 @@
+{
+  "workflow": "export-skill",
+  "skill_name": "bmad-agent-patterns",
+  "version": "1.0.0",
+  "timestamp": "2026-05-06T03:32:08Z",
+  "source_authority": "internal",
+  "skill_type": "single",
+  "confidence_tier": "Forge",
+  "dry_run": false,
+  "outputs": {
+    "context_snippet": "skills/bmad-agent-patterns/1.0.0/bmad-agent-patterns/context-snippet.md",
+    "managed_sections": [
+      "CLAUDE.md",
+      "AGENTS.md",
+      ".cursorrules"
+    ],
+    "export_manifest": "skills/.export-manifest.json"
+  },
+  "summary": {
+    "always_on_tokens": 173,
+    "on_trigger_tokens": 2643,
+    "full_disclosure_tokens": 5865,
+    "snippet_tokens": 83,
+    "skills_in_managed_section": 2,
+    "targets_updated": 3,
+    "targets_case": 3
+  },
+  "result": "success"
+}
