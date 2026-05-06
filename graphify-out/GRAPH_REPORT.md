@@ -67,15 +67,15 @@
 
 ## Surprising Connections (you probably didn't know these)
 - `skf-audit-skill workflow` --references--> `Drift Report Template`  [INFERRED]
-  /Users/devalexanderdaza/Laboratory/GitHub/devalexanderdaza/bmad-any/_bmad/skf/skf-audit-skill/SKILL.md → /Users/devalexanderdaza/Laboratory/GitHub/devalexanderdaza/bmad-any/_bmad/skf/skf-audit-skill/assets/drift-report-template.md
+  _bmad/skf/skf-audit-skill/SKILL.md → _bmad/skf/skf-audit-skill/assets/drift-report-template.md
 - `SKF: Skill Forge v0.1.0` --configures--> `SKF Configuration`  [INFERRED]
-  /Users/devalexanderdaza/Laboratory/GitHub/devalexanderdaza/bmad-any/_bmad/skf/module.yaml → /Users/devalexanderdaza/Laboratory/GitHub/devalexanderdaza/bmad-any/_bmad/skf/config.yaml
+  _bmad/skf/module.yaml → _bmad/skf/config.yaml
 - `SKF Configuration` --references--> `Alexander (User)`  [INFERRED]
-  /Users/devalexanderdaza/Laboratory/GitHub/devalexanderdaza/bmad-any/_bmad/skf/config.yaml → /Users/devalexanderdaza/Laboratory/GitHub/devalexanderdaza/bmad-any/_bmad/config.user.yaml
+  _bmad/skf/config.yaml → _bmad/config.user.yaml
 - `skf-create-stack-skill workflow` --references--> `Compose Mode Rules`  [INFERRED]
-  /Users/devalexanderdaza/Laboratory/GitHub/devalexanderdaza/bmad-any/_bmad/skf/skf-create-stack-skill/SKILL.md → /Users/devalexanderdaza/Laboratory/GitHub/devalexanderdaza/bmad-any/_bmad/skf/skf-create-stack-skill/references/compose-mode-rules.md
+  _bmad/skf/skf-create-stack-skill/SKILL.md → _bmad/skf/skf-create-stack-skill/references/compose-mode-rules.md
 - `skf-create-stack-skill workflow` --references--> `Manifest Detection Patterns`  [INFERRED]
-  /Users/devalexanderdaza/Laboratory/GitHub/devalexanderdaza/bmad-any/_bmad/skf/skf-create-stack-skill/SKILL.md → /Users/devalexanderdaza/Laboratory/GitHub/devalexanderdaza/bmad-any/_bmad/skf/skf-create-stack-skill/references/manifest-patterns.md
+  _bmad/skf/skf-create-stack-skill/SKILL.md → _bmad/skf/skf-create-stack-skill/references/manifest-patterns.md
 
 ## Hyperedges (group relationships)
 - **Skill Creation Pipeline** — skf_create_skill, create_skill_stage_load_brief, create_skill_stage_ecosystem_check, create_skill_stage_extract, create_skill_stage_enrich, create_skill_stage_compile, create_skill_stage_validate, create_skill_stage_generate_artifacts, create_skill_stage_report, create_skill_stage_health_check [INFERRED]
