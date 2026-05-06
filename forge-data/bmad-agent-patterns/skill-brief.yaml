@@ -1,0 +1,54 @@
+---
+name: bmad-agent-patterns
+version: 1.0.0
+source_type: source
+source_repo: /Users/devalexanderdaza/Laboratory/GitHub/devalexanderdaza/bmad-any
+language: yaml-toml-markdown
+description: Conventions and structural patterns for authoring BMAD agents in this
+  project — roles, triggers, persona rules, task boundaries, and output contracts.
+  Reach for this when creating a new agent, reviewing an existing one for compliance,
+  or deciding how to split responsibilities across the agent roster.
+forge_tier: Forge
+created: '2026-05-06'
+created_by: Alexander Daza
+scope:
+  type: specific-modules
+  include:
+  - .agents/skills/bmad-agent-analyst/**
+  - .agents/skills/bmad-agent-architect/**
+  - .agents/skills/bmad-agent-dev/**
+  - .agents/skills/bmad-agent-pm/**
+  - .agents/skills/bmad-agent-tech-writer/**
+  - .agents/skills/bmad-agent-builder/**
+  exclude:
+  - .agents/skills/bmad-brainstorming/**
+  - .agents/skills/bmad-create-*/**
+  - .agents/skills/bmad-bmb-setup/**
+  - .agents/skills/bmad-check-*/**
+  - .agents/skills/bmad-checkpoint-*/**
+  - .agents/skills/bmad-code-review/**
+  - .agents/skills/bmad-correct-course/**
+  - .agents/skills/bmad-customize/**
+  - .agents/skills/bmad-dev-story/**
+  - .agents/skills/bmad-d*/**
+  - .agents/skills/bmad-edit-*/**
+  - .agents/skills/bmad-g*/**
+  - .agents/skills/bmad-i*/**
+  - .agents/skills/bmad-m*/**
+  - .agents/skills/bmad-party-mode/**
+  - .agents/skills/bmad-prfaq/**
+  - .agents/skills/bmad-product-brief/**
+  - .agents/skills/bmad-qa-*/**
+  - .agents/skills/bmad-r*/**
+  - .agents/skills/bmad-s*/**
+  - .agents/skills/bmad-t*/**
+  - .agents/skills/bmad-v*/**
+  - .agents/skills/bmad-w*/**
+  - .opencode/**
+  - _bmad/**
+  - forge-data/**
+  - _skf-learn/**
+  notes: '6 representative agent-skill directories covering the full pattern spectrum:
+    pure-role agents (base), extended-capability (tech-writer), and meta-agent builder
+    (full asset+script structure).'
+source_authority: internal

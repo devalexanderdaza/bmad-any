@@ -1,0 +1,62 @@
+# Extraction Rules — bmad-agent-patterns v1.0.0
+
+## Metadata
+
+- **Generated:** 2026-05-06
+- **Forge Tier:** Forge
+- **Skill:** bmad-agent-patterns
+- **Version:** 1.0.0
+
+## Language
+
+```yaml
+language: yaml-toml-markdown
+detection_method: manual-override
+detection_note: >
+  skf-detect-language.py returned 'javascript' (false positive — .opencode/node_modules present).
+  Language manually overridden to yaml-toml-markdown; actual skill content is YAML frontmatter,
+  TOML config tables, and Markdown documentation.
+```
+
+## Extraction Method
+
+```yaml
+method: source-reading
+confidence_tier: T1-low
+reason: >
+  YAML/TOML/Markdown is not in the ast-grep supported language list for Forge tier.
+  No ast-grep patterns available. Structural patterns extracted via direct source file reading.
+ast_grep_used: false
+```
+
+## Files in Scope
+
+```yaml
+scope_type: specific-modules
+directories:
+  - .agents/skills/bmad-agent-analyst/
+  - .agents/skills/bmad-agent-architect/
+  - .agents/skills/bmad-agent-dev/
+  - .agents/skills/bmad-agent-pm/
+  - .agents/skills/bmad-agent-tech-writer/
+  - .agents/skills/bmad-agent-builder/
+total_files: 62
+files_read: 10
+saturation_reached_at: 5
+```
+
+## Saturation
+
+Pattern saturation reached after reading 5 SKILL.md files (pure-role agents). All subsequent files
+reinforced patterns P1-P11 without introducing new structural patterns. Remaining 52 files
+(reference docs, templates, scripts in bmad-agent-builder/) are referenced in provenance citations
+but not individually read.
+
+## Reproducibility
+
+To reproduce this extraction:
+1. Read SKILL.md from each of the 6 agent directories in scope
+2. Read customize.toml from each of the 6 agent directories
+3. Read standard-fields.md and SKILL-template.md from bmad-agent-builder/references/ and assets/
+4. Cross-reference patterns for consistency across all 5 pure-role agents
+5. Document divergences (builder uses different activation pattern — P11)

@@ -1,0 +1,35 @@
+{
+  "skill": "skf-create-skill",
+  "status": "success",
+  "timestamp": "2026-05-06T00:00:00Z",
+  "outputs": [
+    {"type": "skill", "path": "skills/bmad-agent-patterns/1.0.0/bmad-agent-patterns/SKILL.md"},
+    {"type": "skill", "path": "skills/bmad-agent-patterns/1.0.0/bmad-agent-patterns/context-snippet.md"},
+    {"type": "manifest", "path": "skills/bmad-agent-patterns/1.0.0/bmad-agent-patterns/metadata.json"},
+    {"type": "report", "path": "forge-data/bmad-agent-patterns/1.0.0/evidence-report.md"},
+    {"type": "report", "path": "forge-data/bmad-agent-patterns/1.0.0/provenance-map.json"},
+    {"type": "config", "path": "forge-data/bmad-agent-patterns/1.0.0/extraction-rules.yaml"}
+  ],
+  "summary": {
+    "skill_name": "bmad-agent-patterns",
+    "version": "1.0.0",
+    "forge_tier": "Forge",
+    "language": "yaml-toml-markdown",
+    "export_count": 11,
+    "confidence_distribution": {
+      "T1": 0,
+      "T1-low": 11,
+      "T2": 0,
+      "T3": 0
+    },
+    "files_scanned": 10,
+    "files_in_scope": 62,
+    "public_api_coverage": 1.0,
+    "warnings": [
+      "language-detection-override: false positive javascript → yaml-toml-markdown",
+      "T1-low throughout: YAML/TOML/Markdown not in ast-grep supported language list",
+      "content_score 42% below 60% floor — covered by dismissal rules"
+    ],
+    "validation_status": "pass-with-warnings"
+  }
+}
