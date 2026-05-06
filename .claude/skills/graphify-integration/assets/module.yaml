@@ -1,0 +1,25 @@
+code: gfi
+name: "Graphify Integration"
+description: "Registers Graphify as an invocable BMAD workflow skill."
+module_version: 0.1.0
+default_selected: false
+module_greeting: >
+  Graphify Integration is configured. You can now run graphify workflows through the graphify-integration skill.
+
+graphify_bin:
+  prompt: "Graphify executable"
+  default: "graphify"
+  example: "graphify"
+  user_setting: true
+
+graphify_default_args:
+  prompt: "Default arguments for graphify run mode"
+  default: ""
+  example: ""
+  user_setting: true
+
+graphify_output_dir:
+  prompt: "Graphify output directory"
+  default: "graphify-out"
+  result: "{project-root}/{value}"
+  user_setting: false

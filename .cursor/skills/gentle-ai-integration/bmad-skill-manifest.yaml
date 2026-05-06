@@ -1,0 +1,32 @@
+schema_version: "1.0"
+skill:
+  id: gentle-ai-integration
+  name: Gentle-AI Integration
+  version: "0.1.0"
+  type: workflow
+  description: "Optional gentle-ai integration: setup, diagnose, sync, and run the CLI."
+  entry: SKILL.md
+  owner: "local"
+  tags:
+    - bmad
+    - gentle-ai
+    - integration
+    - cli
+compatibility:
+  platforms:
+    - darwin
+    - linux
+    - windows
+  agents:
+    - claude-code
+    - opencode
+    - cursor
+    - github-copilot
+    - windsurf
+    - gemini-cli
+    - codex
+    - kiro
+    - kimi-code
+    - qwen-code
+    - kilo-code
+    - antigravity
