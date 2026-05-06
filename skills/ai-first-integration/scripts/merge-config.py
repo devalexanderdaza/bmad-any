@@ -21,7 +21,9 @@ Exit codes: 0=success, 1=validation error, 2=runtime error
 
 import argparse
 import json
+import os
 import sys
+import tempfile
 from pathlib import Path
 
 try:
@@ -342,21 +344,40 @@ def extract_user_settings(module_yaml: dict, answers: dict) -> dict:
 
 
 def write_config(config: dict, config_path: str, verbose: bool = False) -> None:
-    """Write config dict to YAML file, creating parent dirs as needed."""
+    """Write config dict atomically, creating parent dirs as needed."""
     path = Path(config_path)
     path.parent.mkdir(parents=True, exist_ok=True)
 
     if verbose:
         print(f"Writing config to {path}", file=sys.stderr)
 
-    with open(path, "w", encoding="utf-8") as f:
-        yaml.dump(
-            config,
-            f,
-            default_flow_style=False,
-            allow_unicode=True,
-            sort_keys=False,
-        )
+    temp_path = None
+    try:
+        with tempfile.NamedTemporaryFile(
+            mode="w",
+            encoding="utf-8",
+            dir=path.parent,
+            suffix=".tmp",
+            delete=False,
+        ) as f:
+            temp_path = Path(f.name)
+            yaml.dump(
+                config,
+                f,
+                default_flow_style=False,
+                allow_unicode=True,
+                sort_keys=False,
+            )
+            f.flush()
+            os.fsync(f.fileno())
+
+        os.replace(temp_path, path)
+    except OSError as exc:
+        print(f"Error: Could not write config to {path}: {exc}", file=sys.stderr)
+        sys.exit(2)
+    finally:
+        if temp_path and temp_path.exists():
+            temp_path.unlink(missing_ok=True)
 
 
 def main():
