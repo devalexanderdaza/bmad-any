@@ -14,6 +14,16 @@ This skill supports two modes:
 - `setup` / `configure` / `install`: register this module into project `_bmad` config and help menu.
 - default `run` mode: validate Graphify availability and execute the requested Graphify command.
 
+## Invocation Contract
+
+**Triggers:** User mentions "graphify", "run graph", "build graph report", "update graph", "configure graphify", "install graphify", "setup graphify", or `/graphify`.
+
+**Arguments (optional):**
+- `--setup` / `configure` / `install` → runs the `configure` capability action
+- Any other args → passed through to the Graphify CLI as `<user-args>`
+
+**Returns:** Confirmation of command run, output location, and next step suggestion.
+
 ## On Activation
 
 1. Parse user intent and optional arguments.
@@ -26,8 +36,8 @@ This skill supports two modes:
 4. Verify Graphify executable:
    - Run `command -v <graphify_bin>`.
    - If not found, guide/install using:
-     - `uv tool install graphifyy`
-     - ensure PATH includes `export PATH="/Users/devalexanderdaza/.local/bin:$PATH"`
+      - `uv tool install graphify`
+      - ensure PATH includes `export PATH="$HOME/.local/bin:$PATH"`
    - Re-check executable after install guidance.
 5. Execute Graphify command:
    - If user provided explicit args, run `<graphify_bin> <user-args>`.
