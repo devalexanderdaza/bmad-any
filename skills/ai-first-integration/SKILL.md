@@ -51,7 +51,23 @@ This skill supports two modes:
 4. Verify AI-First executable:
    - Run `command -v <ai_first_bin>`.
    - If found, run `<ai_first_bin> --version`.
-   - If not found, load `./assets/install-guide.md` and present install guidance without auto-installing.
+   - If not found (first detection):
+     a. Inform the user clearly: "`af` (ai-first-cli) was not found on this system."
+     b. Load `./assets/install-guide.md` for reference.
+     c. Offer to install immediately: ask the user "Do you want me to install ai-first-cli now via `npm install -g ai-first-cli`?"
+     d. If user confirms → run `npm install -g ai-first-cli`, then re-verify with `command -v af && af --version`.
+     e. If install succeeds → continue with normal flow; proceed to platform selection (step 4f).
+     f. **Platform selection (interactive)**:
+        - Ask the user which MCP platforms they want to configure. Present available options:
+          - `opencode`
+          - `codex`
+          - `claude-code`
+          - `cursor`
+          - All of the above
+          - None / skip
+        - For each selected platform, run: `af install --platform <platform>`.
+        - After all installs, run `af mcp doctor --json` and summarize results.
+     g. If user declines install → present manual install guide and stop.
 5. Execute mapped action:
    - `diagnose`: run detection-only summary (`<ai_first_bin> --version` and suggested next commands).
    - `generate`: run `<ai_first_bin> init --root <ai_first_default_root>`.
@@ -65,6 +81,16 @@ This skill supports two modes:
 
 ## Capability Actions
 
+- `install-cli`:
+  - Triggered when `af` binary is not found.
+  - Offers to install `ai-first-cli` via npm immediately.
+  - If accepted, runs install and re-verifies.
+  - Then runs interactive platform selection.
+- `platform-setup`:
+  - Interactive: presents list of available MCP platforms (`opencode`, `codex`, `claude-code`, `cursor`).
+  - Allows user to select one, many, or all.
+  - Runs `af install --platform <platform>` for each selected.
+  - Finalizes with `af mcp doctor --json` to confirm readiness.
 - `configure`:
   - Triggered by setup/configure/install intent.
   - Runs module registration flow in `./assets/module-setup.md`.
@@ -86,5 +112,6 @@ This skill supports two modes:
 ## Notes
 
 - Keep this integration non-destructive by default.
-- Do not auto-install `ai-first-cli`.
-- Do not mutate MCP client profile files automatically in V1.
+- `install-cli` and `platform-setup` require explicit user confirmation before running any install command.
+- Do not auto-install `ai-first-cli` or mutate MCP client profile files without user consent.
+- Platform list is sourced from `af install --list`; the documented platforms for this version are: `opencode`, `codex`, `claude-code`, `cursor`.
