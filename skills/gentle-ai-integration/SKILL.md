@@ -5,6 +5,15 @@ description: Registers and integrates the gentle-ai CLI with BMAD as an optional
 
 # Gentle AI Integration
 
+## Invocation Contract
+
+| Aspect | Detail |
+|--------|--------|
+| **Inputs** | `action` [configure\|diagnose\|sync\|run] (optional — inferred from user intent); `args` (optional, passed through to CLI) |
+| **Outputs** | configured module / diagnostic report / sync output / command output |
+| **Headless** | Gates auto-resolve with default action when `{headless_mode}` is true |
+| **Tokens resolved** | `{project-root}`, `{communication_language}`, `{headless_mode}` |
+
 ## Overview
 
 Optional integration wrapper around the external `gentle-ai` CLI.
