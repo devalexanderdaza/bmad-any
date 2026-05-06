@@ -1,0 +1,12 @@
+{
+  "mcpServers": {
+    "ai-first": {
+      "command": "af",
+      "args": [
+        "mcp",
+        "--root",
+        "."
+      ]
+    }
+  }
+}
