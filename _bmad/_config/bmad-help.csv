@@ -41,6 +41,11 @@ BMad Method,bmad-agent-tech-writer,Update Standards,US,Update agent memory docum
 BMad Method,bmad-agent-tech-writer,Mermaid Generate,MG,Create a Mermaid diagram based on user description. Will suggest diagram types if not specified.,mermaid,,anytime,,,false,planning_artifacts,mermaid diagram
 BMad Method,bmad-agent-tech-writer,Validate Document,VD,Review the specified document against documentation standards and best practices. Returns specific actionable improvement suggestions organized by priority.,validate,[path],anytime,,,false,planning_artifacts,validation report
 BMad Method,bmad-agent-tech-writer,Explain Concept,EC,Create clear technical explanations with examples and diagrams for complex concepts.,explain,[topic],anytime,,,false,project_knowledge,explanation
+Gentle-AI Integration,_meta,,,,,,,,,false,https://github.com/Gentleman-Programming/gentle-ai,
+Gentle-AI Integration,gentle-ai-integration,Setup Gentle-AI Integration,GAI,Register gentle-ai integration module and configuration,configure,setup|configure|install,anytime,,,false,,configured module
+Gentle-AI Integration,gentle-ai-integration,Diagnose Gentle-AI,GAID,Detect gentle-ai CLI and report compatibility notes,diagnose,,anytime,gentle-ai-integration:configure,,false,,diagnostic report
+Gentle-AI Integration,gentle-ai-integration,Sync Gentle-AI,GAIS,Run gentle-ai sync to align configs,sync,[gentle-ai args],anytime,gentle-ai-integration:configure,,false,,sync output
+Gentle-AI Integration,gentle-ai-integration,Run Gentle-AI,GAIR,Run a gentle-ai command explicitly,run,[gentle-ai args],anytime,gentle-ai-integration:configure,,false,,command output
 Core,_meta,,,,,,,,,false,https://docs.bmad-method.org/llms.txt,
 Core,bmad-brainstorming,Brainstorming,BSP,Use early in ideation or when stuck generating ideas.,,,anytime,,,false,{output_folder}/brainstorming,brainstorming session
 Core,bmad-party-mode,Party Mode,PM,Orchestrate multi-agent discussions when you need multiple perspectives or want agents to collaborate.,,,anytime,,,false,,

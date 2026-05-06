@@ -1,0 +1,73 @@
+{
+  "schema_version": "2",
+  "exports": {
+    "bmad-agent-patterns": {
+      "active_version": "1.0.0",
+      "versions": {
+        "1.0.0": {
+          "ides": [
+            "github-copilot",
+            "opencode",
+            "claude-code",
+            "cursor"
+          ],
+          "last_exported": "2026-05-06",
+          "status": "active"
+        }
+      }
+    },
+    "gentle-ai-integration": {
+      "active_version": "0.1.0",
+      "versions": {
+        "0.1.0": {
+          "ides": [
+            "github-copilot",
+            "opencode",
+            "claude-code",
+            "cursor",
+            "windsurf",
+            "gemini-cli",
+            "codex",
+            "kiro",
+            "kimi-code",
+            "qwen-code",
+            "kilo-code",
+            "antigravity"
+          ],
+          "last_exported": "2026-05-05",
+          "status": "active"
+        }
+      }
+    },
+    "graphify-integration": {
+      "active_version": "0.1.0",
+      "versions": {
+        "0.1.0": {
+          "ides": [
+            "github-copilot",
+            "opencode",
+            "claude-code",
+            "cursor"
+          ],
+          "last_exported": "2026-05-06",
+          "status": "active"
+        }
+      }
+    },
+    "bmad-method": {
+      "active_version": "6.6.0",
+      "versions": {
+        "6.6.0": {
+          "ides": [
+            "github-copilot",
+            "opencode",
+            "claude-code",
+            "cursor"
+          ],
+          "last_exported": "2026-05-05",
+          "status": "active"
+        }
+      }
+    }
+  }
+}

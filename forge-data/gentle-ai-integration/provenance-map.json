@@ -1,0 +1,48 @@
+{
+  "schema_version": "1.0",
+  "skill_name": "gentle-ai-integration",
+  "skill_version": "0.1.0",
+  "source_root": "manual",
+  "source_type": "manual",
+  "source_ref": "local",
+  "extraction_date": "2026-05-05T00:00:00Z",
+  "confidence_tier": "Quick",
+  "entries": [],
+  "file_entries": [
+    {
+      "source_file": "skills/gentle-ai-integration/SKILL.md",
+      "role": "workflow-doc",
+      "content_hash": null
+    },
+    {
+      "source_file": "skills/gentle-ai-integration/assets/module.yaml",
+      "role": "module-definition",
+      "content_hash": null
+    },
+    {
+      "source_file": "skills/gentle-ai-integration/assets/module-help.csv",
+      "role": "help-entries",
+      "content_hash": null
+    },
+    {
+      "source_file": "skills/gentle-ai-integration/assets/install-guide.md",
+      "role": "asset",
+      "content_hash": null
+    },
+    {
+      "source_file": "skills/gentle-ai-integration/assets/module-setup.md",
+      "role": "asset",
+      "content_hash": null
+    },
+    {
+      "source_file": "skills/gentle-ai-integration/scripts/merge-config.py",
+      "role": "script",
+      "content_hash": null
+    },
+    {
+      "source_file": "skills/gentle-ai-integration/scripts/merge-help-csv.py",
+      "role": "script",
+      "content_hash": null
+    }
+  ]
+}

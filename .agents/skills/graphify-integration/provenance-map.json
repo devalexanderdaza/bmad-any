@@ -1,0 +1,40 @@
+{
+  "schema_version": "1",
+  "skill_name": "graphify-integration",
+  "skill_version": "0.1.0",
+  "source_commit": "local",
+  "generated_at": "2026-05-06T00:00:00Z",
+  "file_entries": [
+    {
+      "source_file": "skills/graphify-integration/SKILL.md",
+      "file_type": "skill",
+      "content_hash": "manual"
+    },
+    {
+      "source_file": "skills/graphify-integration/assets/module.yaml",
+      "file_type": "asset",
+      "content_hash": "manual"
+    },
+    {
+      "source_file": "skills/graphify-integration/assets/module-setup.md",
+      "file_type": "asset",
+      "content_hash": "manual"
+    },
+    {
+      "source_file": "skills/graphify-integration/assets/module-help.csv",
+      "file_type": "asset",
+      "content_hash": "manual"
+    },
+    {
+      "source_file": "skills/graphify-integration/scripts/merge-help-csv.py",
+      "file_type": "script",
+      "content_hash": "manual"
+    },
+    {
+      "source_file": "skills/graphify-integration/scripts/merge-config.py",
+      "file_type": "script",
+      "content_hash": "manual"
+    }
+  ],
+  "entries": []
+}

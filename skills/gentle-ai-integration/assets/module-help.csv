@@ -1,0 +1,5 @@
+module,skill,display-name,menu-code,description,action,args,phase,after,before,required,output-location,outputs
+Gentle-AI Integration,gentle-ai-integration,Setup Gentle-AI Integration,GAI,Register gentle-ai integration module and configuration,configure,setup|configure|install,anytime,,,false,,configured module
+Gentle-AI Integration,gentle-ai-integration,Diagnose Gentle-AI,GAID,Detect gentle-ai CLI and report compatibility notes,diagnose,,anytime,gentle-ai-integration:configure,,false,,diagnostic report
+Gentle-AI Integration,gentle-ai-integration,Sync Gentle-AI,GAIS,Run gentle-ai sync to align configs,sync,[gentle-ai args],anytime,gentle-ai-integration:configure,,false,,sync output
+Gentle-AI Integration,gentle-ai-integration,Run Gentle-AI,GAIR,Run a gentle-ai command explicitly,run,[gentle-ai args],anytime,gentle-ai-integration:configure,,false,,command output

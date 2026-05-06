@@ -8,3 +8,11 @@
 
 [modules.gfi]
 graphify_output_dir = "{project-root}/graphify-out"
+
+[modules.gai]
+gentle_ai_bin = "gentle-ai"
+gentle_ai_default_args = ""
+name = "Gentle-AI Integration"
+description = "Registers gentle-ai as an optional BMAD workflow and provides detection diagnostics."
+version = "0.1.0"
+default_selected = false

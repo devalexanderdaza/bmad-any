@@ -1,0 +1,19 @@
+code: gai
+name: "Gentle-AI Integration"
+description: "Registers gentle-ai as an optional BMAD workflow and provides detection diagnostics."
+module_version: 0.1.0
+default_selected: false
+module_greeting: >
+  Gentle-AI integration is configured. You can now run gentle-ai workflows through the gentle-ai-integration skill.
+
+gentle_ai_bin:
+  prompt: "gentle-ai executable"
+  default: "gentle-ai"
+  example: "gentle-ai"
+  user_setting: true
+
+gentle_ai_default_args:
+  prompt: "Default arguments for gentle-ai run mode"
+  default: ""
+  example: "sync"
+  user_setting: true

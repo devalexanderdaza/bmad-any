@@ -1,0 +1,21 @@
+{
+  "status": "success",
+  "exit_code": 0,
+  "phase": "finalize",
+  "error": null,
+  "outputs": {
+    "skill_md": "skills/bmad-method/6.6.0/bmad-method/SKILL.md",
+    "context_snippet": "skills/bmad-method/6.6.0/bmad-method/context-snippet.md",
+    "metadata": "skills/bmad-method/6.6.0/bmad-method/metadata.json"
+  },
+  "summary": {
+    "name": "bmad-method",
+    "version": "6.6.0",
+    "language": "javascript",
+    "exports_count": 0,
+    "confidence": "low",
+    "validation_score": 100,
+    "repo_shape": "library"
+  },
+  "skill_package": "/Users/devalexanderdaza/Laboratory/GitHub/devalexanderdaza/bmad-any/skills/bmad-method/6.6.0/bmad-method"
+}
