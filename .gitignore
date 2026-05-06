@@ -98,3 +98,13 @@ htmlcov/
 .vscode/settings.json
 .idea/workspace.xml
 _bmad/_memory/
+
+# ai-first / ai-context
+ai-context/
+
+# User config overrides (sensitive, not committed)
+_bmad/config.user.yaml
+_bmad/config.user.toml
+
+# Skill export artifacts (generated, not source)
+skills/export-skill-result-*.json
