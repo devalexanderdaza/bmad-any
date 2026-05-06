@@ -11,3 +11,5 @@ AI-First Integration,ai-first-integration,Task Context,AFIC,Run ai-first context
 AI-First Integration,ai-first-integration,Understand Topic,AFIU,Run ai-first understand for a topic or flow,understand,[topic],anytime,ai-first-integration:configure,,false,ai_first_output_dir,topic understanding output
 AI-First Integration,ai-first-integration,MCP Doctor,AFIM,Run ai-first mcp doctor to check MCP setup,mcp-doctor,,anytime,ai-first-integration:configure,,false,ai_first_output_dir,mcp diagnostic output
 AI-First Integration,ai-first-integration,Run AI-First,AFIR,Run ai-first command explicitly,run,[ai-first args],anytime,ai-first-integration:configure,,false,ai_first_output_dir,command output
+Graphify Integration,graphify-integration,Setup Graphify Integration,GFI,Register graphify integration module and configuration,configure,setup|configure|install,anytime,,,true,graphify_output_dir,configured module
+Graphify Integration,graphify-integration,Run Graphify,GFIR,Run graphify CLI to generate or update project graph artifacts,run,[graphify args],anytime,graphify-integration:configure,,false,graphify_output_dir,graph report and wiki artifacts

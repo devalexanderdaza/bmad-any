@@ -18,3 +18,9 @@ afi:
   ai_first_output_dir: '{project-root}/ai-context'
   ai_first_default_root: '{project-root}'
   ai_first_http_port: '3847'
+gfi:
+  name: Graphify Integration
+  description: Registers Graphify as an invocable BMAD workflow skill.
+  version: 0.1.0
+  default_selected: false
+  graphify_output_dir: '{project-root}/graphify-out'
