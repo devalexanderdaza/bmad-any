@@ -2,10 +2,10 @@
   "name": "gentle-ai-integration",
   "version": "0.1.0",
   "generation_date": "2026-05-05T00:00:00Z",
-  "confidence_tier": "Quick",
+  "confidence_tier": "Forge",
   "source_root": "manual",
   "source_type": "manual",
   "source_ref": "local",
   "language": "markdown",
-  "export_count": 0
+  "export_count": 1
 }
