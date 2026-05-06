@@ -81,3 +81,39 @@ None (skill-check automated fix skipped due to flag probe failure)
 |------|------|----------|-----------|-----------|
 | 02 | Ecosystem Check | Skipped | No ecosystem registry API available | 2026-05-06 |
 | 04 | Enrich | Skipped | Forge tier — QMD not available | 2026-05-06 |
+
+## Update Operation — 2026-05-05
+
+**Trigger:** skf-test-skill pass-with-drift remediation
+**Forge Tier:** Forge
+**Mode:** gap-driven
+
+### Changes Detected
+- Files modified: 2
+- Files added: 0
+- Files deleted: 0
+- Exports affected: 4
+
+### Merge Results
+- Exports updated: 4
+- Exports added: 0
+- Exports removed: 0
+- [MANUAL] sections preserved: 3
+- Conflicts resolved: 0
+
+### Validation Summary
+- Spec compliance: PASS
+- [MANUAL] integrity: PASS
+- Confidence tiers: PASS
+- Provenance: PASS
+
+### Description Guard
+- Restored: false
+- Triggering tool: —
+- Original description preserved: true
+- Notes: No external fixer rewrote frontmatter during this gap-driven remediation.
+
+### Context Snippet
+- Regenerated: false
+- Triggers fired: —
+- Notes: Gap-driven repairs updated body/reference accuracy only; snippet surface unchanged.

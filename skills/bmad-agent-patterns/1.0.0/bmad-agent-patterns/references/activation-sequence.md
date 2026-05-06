@@ -43,7 +43,6 @@ applying merge rules:
 
 Any missing file is skipped. Merge rules:
 - Scalars: override wins
-- Tables: deep-merge
 - Arrays-of-tables keyed by `code` or `id`: replace matching entries, append new ones
 - All other arrays: append
 

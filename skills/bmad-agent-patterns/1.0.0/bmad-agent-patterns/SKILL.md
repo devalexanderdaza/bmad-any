@@ -160,7 +160,7 @@ Read base → team → user: `{skill-root}/customize.toml` → `{project-root}/_
 **agent_type** — determines archetype and required files:
 
 - `stateless` — everything in SKILL.md + customize.toml; no sanctum, no memory
-- `memory` — lean bootloader SKILL.md + customize.toml + sanctum (PERSONA, CREED, BOND, CAPABILITIES, First Breath)
+- `memory` — lean bootloader SKILL.md + customize.toml + sanctum (PERSONA.md, CREED.md, BOND.md, CAPABILITIES.md, MEMORY.md, First Breath)
 - `autonomous` — memory agent + PULSE for between-session operation
 
 `[SRC:.agents/skills/bmad-agent-builder/SKILL.md:L35-43]`
@@ -349,7 +349,7 @@ prompt = "{prompt text to execute directly}"
 
 ### Pattern P9 — Override File Locations
 
-```
+```text
 {skill-root}/customize.toml                        # base defaults (shipped with skill)
 {project-root}/_bmad/custom/{skill-name}.toml      # team overrides (committed)
 {project-root}/_bmad/custom/{skill-name}.user.toml # personal overrides (gitignored)
@@ -366,7 +366,7 @@ Merge order: base → team → user. Missing files are skipped with no error.
 | Archetype | `agent_type` | Required Files | Memory |
 |-----------|-------------|----------------|--------|
 | Stateless | `stateless` | SKILL.md + customize.toml | None |
-| Memory | `memory` | Bootloader SKILL.md + customize.toml + sanctum (PERSONA, CREED, BOND, CAPABILITIES, First Breath) | Yes |
+| Memory | `memory` | Bootloader SKILL.md + customize.toml + sanctum (PERSONA.md, CREED.md, BOND.md, CAPABILITIES.md, MEMORY.md, First Breath) | Yes |
 | Autonomous | `autonomous` | Memory agent files + PULSE | Yes + between-session |
 
 **Provenance:** `[SRC:.agents/skills/bmad-agent-builder/SKILL.md:L35-43]`
@@ -393,7 +393,7 @@ Different from pure-role agents — no 8-step persona sequence.
 ```
 
 **File structure (meta-agent builder):**
-```
+```text
 {skill-name}/
 ├── SKILL.md
 ├── customize.toml

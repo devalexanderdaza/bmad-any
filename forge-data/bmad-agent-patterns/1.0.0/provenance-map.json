@@ -6,6 +6,14 @@
   "source_commit": "bfb08ff3e0eaef8ce96a40ee12b65a63edc623bd",
   "source_ref": "main",
   "generated_at": "2026-05-06T00:00:00Z",
+  "last_update": {
+    "date": "2026-05-05",
+    "update_type": "gap-driven",
+    "files_changed": 2,
+    "exports_affected": 4,
+    "confidence_tier": "Forge",
+    "manual_sections_preserved": 3
+  },
   "entries": [
     {
       "export_name": "SKILL.md-frontmatter",
