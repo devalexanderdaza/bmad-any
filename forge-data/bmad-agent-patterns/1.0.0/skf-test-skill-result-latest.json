@@ -1,0 +1,31 @@
+{
+  "skill": "skf-test-skill",
+  "status": "success",
+  "timestamp": "2026-05-06T00:01:00Z",
+  "runId": "20260506T000100Z-0001-a4f2",
+  "outputs": [
+    {"type": "report", "path": "forge-data/bmad-agent-patterns/1.0.0/test-report-bmad-agent-patterns-20260506T000100Z-0001-a4f2.md"}
+  ],
+  "summary": {
+    "skill_name": "bmad-agent-patterns",
+    "version": "1.0.0",
+    "score": 96.58,
+    "threshold": 80,
+    "result": "PASS_WITH_DRIFT",
+    "testMode": "naive",
+    "forgeTier": "Forge",
+    "activeCategories": ["exportCoverage", "signatureAccuracy", "typeCoverage", "externalValidation"],
+    "skippedCategories": ["coherence"],
+    "inconclusiveReasons": [],
+    "workspaceDrift": "overridden",
+    "gaps": {
+      "total": 4,
+      "blocking": 1,
+      "high": 1,
+      "medium": 3,
+      "low": 0,
+      "info": 0
+    }
+  },
+  "healthCheckDispatched": false
+}
