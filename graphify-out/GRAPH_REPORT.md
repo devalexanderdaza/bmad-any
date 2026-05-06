@@ -1,4 +1,4 @@
-# Graph Report - /Users/devalexanderdaza/Laboratory/GitHub/devalexanderdaza/bmad-any  (2026-05-06)
+# Graph Report - bmad-any  (2026-05-06)
 
 ## Corpus Check
 - 216 files · ~150,000 words

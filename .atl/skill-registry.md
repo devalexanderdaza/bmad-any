@@ -8,36 +8,36 @@ See `_shared/skill-resolver.md` for the full resolution protocol.
 
 | Trigger | Skill | Path |
 |---------|-------|------|
-| when implementing a change, preparing commits, splitting PRs, or planning chained or stacked PRs | work-unit-commits | /Users/devalexanderdaza/.claude/skills/work-unit-commits/SKILL.md |
-| when drafting or posting feedback, review comments, maintainer replies, Slack messages, or GitHub comments | comment-writer | /Users/devalexanderdaza/.claude/skills/comment-writer/SKILL.md |
-| when writing guides, READMEs, RFCs, onboarding docs, architecture docs, or review-facing documentation | cognitive-doc-design | /Users/devalexanderdaza/.claude/skills/cognitive-doc-design/SKILL.md |
-| when a PR would exceed 400 changed lines, when planning chained PRs, stacked PRs, or reviewable slices | chained-pr | /Users/devalexanderdaza/.claude/skills/chained-pr/SKILL.md |
-| When creating a GitHub issue, reporting a bug, or requesting a feature | issue-creation | /Users/devalexanderdaza/.claude/skills/issue-creation/SKILL.md |
-| When creating a pull request, opening a PR, or preparing changes for review | branch-pr | /Users/devalexanderdaza/.claude/skills/branch-pr/SKILL.md |
-| When user asks to create a new skill, add agent instructions, or document patterns for AI | skill-creator | /Users/devalexanderdaza/.claude/skills/skill-creator/SKILL.md |
-| When writing Go tests, using teatest, or adding test coverage | go-testing | /Users/devalexanderdaza/.claude/skills/go-testing/SKILL.md |
-| When user says "judgment day", "judgment-day", "review adversarial", "dual review", "doble review", "juzgar", "que lo juzguen" | judgment-day | /Users/devalexanderdaza/.claude/skills/judgment-day/SKILL.md |
-| /graphify | graphify | /Users/devalexanderdaza/.config/opencode/skills/graphify/SKILL.md |
-| When the user requests to "analyze source for skills" or "discover skill opportunities." | skf-analyze-source | /Users/devalexanderdaza/Laboratory/GitHub/devalexanderdaza/bmad-any/.claude/skills/skf-analyze-source/SKILL.md |
-| When the user requests to "audit a skill" or "audit skill" for drift. | skf-audit-skill | /Users/devalexanderdaza/Laboratory/GitHub/devalexanderdaza/bmad-any/.claude/skills/skf-audit-skill/SKILL.md |
-| Design a skill scope through guided discovery. Use when the user requests to "create a skill brief" or "brief a skill". | skf-brief-skill | /Users/devalexanderdaza/Laboratory/GitHub/devalexanderdaza/bmad-any/.claude/skills/skf-brief-skill/SKILL.md |
-| Compile a skill from a brief. Supports --batch for multiple briefs. Use when the user requests to "create a skill" or "compile a skill." | skf-create-skill | /Users/devalexanderdaza/Laboratory/GitHub/devalexanderdaza/bmad-any/.claude/skills/skf-create-skill/SKILL.md |
-| Consolidated project stack skill with integration patterns — code-mode or compose-mode. Use when the user requests to "create a stack skill." | skf-create-stack-skill | /Users/devalexanderdaza/Laboratory/GitHub/devalexanderdaza/bmad-any/.claude/skills/skf-create-stack-skill/SKILL.md |
-| Drop a skill version or entire skill — soft (deprecate) or hard (purge). Use when the user requests to "drop" or "remove a skill." | skf-drop-skill | /Users/devalexanderdaza/Laboratory/GitHub/devalexanderdaza/bmad-any/.claude/skills/skf-drop-skill/SKILL.md |
-| Package for distribution and inject context into CLAUDE.md/AGENTS.md/.cursorrules. Use when the user requests to "export" or "package a skill." | skf-export-skill | /Users/devalexanderdaza/Laboratory/GitHub/devalexanderdaza/bmad-any/.claude/skills/skf-export-skill/SKILL.md |
-| Skill compilation specialist — the forge master. Use when the user asks to "talk to Ferris" or requests the "Skill Forge agent." | skf-forger | /Users/devalexanderdaza/Laboratory/GitHub/devalexanderdaza/bmad-any/.claude/skills/skf-forger/SKILL.md |
-| Fast skill from a package name or GitHub URL — no brief needed. Use when the user requests a "quick skill" or "skill from URL" or "skill from package." | skf-quick-skill | /Users/devalexanderdaza/Laboratory/GitHub/devalexanderdaza/bmad-any/.claude/skills/skf-quick-skill/SKILL.md |
-| Improve architecture doc using verified skill data and VS feasibility findings. Use when the user requests to "refine skill architecture" or "improve architecture doc." | skf-refine-architecture | /Users/devalexanderdaza/Laboratory/GitHub/devalexanderdaza/bmad-any/.claude/skills/skf-refine-architecture/SKILL.md |
-| Rename a skill across all its versions — transactional copy-verify-delete. Use when the user requests to "rename a skill." | skf-rename-skill | /Users/devalexanderdaza/Laboratory/GitHub/devalexanderdaza/bmad-any/.claude/skills/skf-rename-skill/SKILL.md |
-| Initialize forge environment, detect tools, set capability tier. Use when the user requests to "set up" or "initialize the forge." | skf-setup | /Users/devalexanderdaza/Laboratory/GitHub/devalexanderdaza/bmad-any/.claude/skills/skf-setup/SKILL.md |
-| Cognitive completeness verification — quality gate before export. Use when the user requests to "test a skill" or "verify skill completeness." | skf-test-skill | /Users/devalexanderdaza/Laboratory/GitHub/devalexanderdaza/bmad-any/.claude/skills/skf-test-skill/SKILL.md |
-| Smart regeneration preserving [MANUAL] sections after source changes. Use when the user requests to "update a skill" or "regenerate a skill." | skf-update-skill | /Users/devalexanderdaza/Laboratory/GitHub/devalexanderdaza/bmad-any/.claude/skills/skf-update-skill/SKILL.md |
-| Pre-code stack feasibility verification against architecture and PRD documents. Use when the user requests to "verify a tech stack" or "verify stack." | skf-verify-stack | /Users/devalexanderdaza/Laboratory/GitHub/devalexanderdaza/bmad-any/.claude/skills/skf-verify-stack/SKILL.md |
-| Registers and runs AI-First CLI as BMAD-invocable workflow. Use when user asks to generate/verify ai-context, get task context, run MCP doctor, configure AI-First. | ai-first-integration | /Users/devalexanderdaza/Laboratory/GitHub/devalexanderdaza/bmad-any/skills/ai-first-integration/SKILL.md |
-| Registers and runs Graphify CLI as BMAD-invocable workflow. Use when user asks to run graphify, build/update graph report, configure graphify integration. | graphify-integration | /Users/devalexanderdaza/Laboratory/GitHub/devalexanderdaza/bmad-any/skills/graphify-integration/SKILL.md |
-| Registers and integrates gentle-ai CLI with BMAD as optional workflow. Use when user asks to integrate, diagnose, or run gentle-ai. | gentle-ai-integration | /Users/devalexanderdaza/Laboratory/GitHub/devalexanderdaza/bmad-any/skills/gentle-ai-integration/SKILL.md |
-| Agile AI-driven development framework with specialized agent personas, structured workflows, scale-adaptive intelligence. Use when setting up BMad Method, installing agent skills, running BMad workflows. | bmad-method | /Users/devalexanderdaza/Laboratory/GitHub/devalexanderdaza/bmad-any/skills/bmad-method/6.6.0/bmad-method/SKILL.md |
-| Conventions and structural patterns for authoring BMAD agents — roles, triggers, persona rules, task boundaries, output contracts. Use when creating a new agent, reviewing an existing one for compliance, deciding how to split responsibilities across the agent roster. | bmad-agent-patterns | /Users/devalexanderdaza/Laboratory/GitHub/devalexanderdaza/bmad-any/skills/bmad-agent-patterns/1.0.0/bmad-agent-patterns/SKILL.md |
+| when implementing a change, preparing commits, splitting PRs, or planning chained or stacked PRs | work-unit-commits | ${HOME}/.claude/skills/work-unit-commits/SKILL.md |
+| when drafting or posting feedback, review comments, maintainer replies, Slack messages, or GitHub comments | comment-writer | ${HOME}/.claude/skills/comment-writer/SKILL.md |
+| when writing guides, READMEs, RFCs, onboarding docs, architecture docs, or review-facing documentation | cognitive-doc-design | ${HOME}/.claude/skills/cognitive-doc-design/SKILL.md |
+| when a PR would exceed 400 changed lines, when planning chained PRs, stacked PRs, or reviewable slices | chained-pr | ${HOME}/.claude/skills/chained-pr/SKILL.md |
+| When creating a GitHub issue, reporting a bug, or requesting a feature | issue-creation | ${HOME}/.claude/skills/issue-creation/SKILL.md |
+| When creating a pull request, opening a PR, or preparing changes for review | branch-pr | ${HOME}/.claude/skills/branch-pr/SKILL.md |
+| When user asks to create a new skill, add agent instructions, or document patterns for AI | skill-creator | ${HOME}/.claude/skills/skill-creator/SKILL.md |
+| When writing Go tests, using teatest, or adding test coverage | go-testing | ${HOME}/.claude/skills/go-testing/SKILL.md |
+| When user says "judgment day", "judgment-day", "review adversarial", "dual review", "doble review", "juzgar", "que lo juzguen" | judgment-day | ${HOME}/.claude/skills/judgment-day/SKILL.md |
+| /graphify | graphify | ${HOME}/.config/opencode/skills/graphify/SKILL.md |
+| When the user requests to "analyze source for skills" or "discover skill opportunities." | skf-analyze-source | .claude/skills/skf-analyze-source/SKILL.md |
+| When the user requests to "audit a skill" or "audit skill" for drift. | skf-audit-skill | .claude/skills/skf-audit-skill/SKILL.md |
+| Design a skill scope through guided discovery. Use when the user requests to "create a skill brief" or "brief a skill". | skf-brief-skill | .claude/skills/skf-brief-skill/SKILL.md |
+| Compile a skill from a brief. Supports --batch for multiple briefs. Use when the user requests to "create a skill" or "compile a skill." | skf-create-skill | .claude/skills/skf-create-skill/SKILL.md |
+| Consolidated project stack skill with integration patterns — code-mode or compose-mode. Use when the user requests to "create a stack skill." | skf-create-stack-skill | .claude/skills/skf-create-stack-skill/SKILL.md |
+| Drop a skill version or entire skill — soft (deprecate) or hard (purge). Use when the user requests to "drop" or "remove a skill." | skf-drop-skill | .claude/skills/skf-drop-skill/SKILL.md |
+| Package for distribution and inject context into CLAUDE.md/AGENTS.md/.cursorrules. Use when the user requests to "export" or "package a skill." | skf-export-skill | .claude/skills/skf-export-skill/SKILL.md |
+| Skill compilation specialist — the forge master. Use when the user asks to "talk to Ferris" or requests the "Skill Forge agent." | skf-forger | .claude/skills/skf-forger/SKILL.md |
+| Fast skill from a package name or GitHub URL — no brief needed. Use when the user requests a "quick skill" or "skill from URL" or "skill from package." | skf-quick-skill | .claude/skills/skf-quick-skill/SKILL.md |
+| Improve architecture doc using verified skill data and VS feasibility findings. Use when the user requests to "refine skill architecture" or "improve architecture doc." | skf-refine-architecture | .claude/skills/skf-refine-architecture/SKILL.md |
+| Rename a skill across all its versions — transactional copy-verify-delete. Use when the user requests to "rename a skill." | skf-rename-skill | .claude/skills/skf-rename-skill/SKILL.md |
+| Initialize forge environment, detect tools, set capability tier. Use when the user requests to "set up" or "initialize the forge." | skf-setup | .claude/skills/skf-setup/SKILL.md |
+| Cognitive completeness verification — quality gate before export. Use when the user requests to "test a skill" or "verify skill completeness." | skf-test-skill | .claude/skills/skf-test-skill/SKILL.md |
+| Smart regeneration preserving [MANUAL] sections after source changes. Use when the user requests to "update a skill" or "regenerate a skill." | skf-update-skill | .claude/skills/skf-update-skill/SKILL.md |
+| Pre-code stack feasibility verification against architecture and PRD documents. Use when the user requests to "verify a tech stack" or "verify stack." | skf-verify-stack | .claude/skills/skf-verify-stack/SKILL.md |
+| Registers and runs AI-First CLI as BMAD-invocable workflow. Use when user asks to generate/verify ai-context, get task context, run MCP doctor, configure AI-First. | ai-first-integration | skills/ai-first-integration/SKILL.md |
+| Registers and runs Graphify CLI as BMAD-invocable workflow. Use when user asks to run graphify, build/update graph report, configure graphify integration. | graphify-integration | skills/graphify-integration/SKILL.md |
+| Registers and integrates gentle-ai CLI with BMAD as optional workflow. Use when user asks to integrate, diagnose, or run gentle-ai. | gentle-ai-integration | skills/gentle-ai-integration/SKILL.md |
+| Agile AI-driven development framework with specialized agent personas, structured workflows, scale-adaptive intelligence. Use when setting up BMad Method, installing agent skills, running BMad workflows. | bmad-method | skills/bmad-method/6.6.0/bmad-method/SKILL.md |
+| Conventions and structural patterns for authoring BMAD agents — roles, triggers, persona rules, task boundaries, output contracts. Use when creating a new agent, reviewing an existing one for compliance, deciding how to split responsibilities across the agent roster. | bmad-agent-patterns | skills/bmad-agent-patterns/1.0.0/bmad-agent-patterns/SKILL.md |
 
 ## Compact Rules
 
@@ -222,13 +222,13 @@ Pre-digested rules per skill. Delegators copy matching blocks into sub-agent pro
 
 | File | Path | Notes |
 |------|------|-------|
-| AGENTS.md | /Users/devalexanderdaza/Laboratory/GitHub/devalexanderdaza/bmad-any/AGENTS.md | Index — references skills below |
-| bmad-agent-patterns v1.0.0 | /Users/devalexanderdaza/Laboratory/GitHub/devalexanderdaza/bmad-any/skills/bmad-agent-patterns/ | Referenced by AGENTS.md |
-| bmad-method v6.6.0 | /Users/devalexanderdaza/Laboratory/GitHub/devalexanderdaza/bmad-any/skills/bmad-method/ | Referenced by AGENTS.md |
-| gentle-ai-integration v0.1.0 | /Users/devalexanderdaza/Laboratory/GitHub/devalexanderdaza/bmad-any/skills/gentle-ai-integration/ | Referenced by AGENTS.md |
-| graphify-integration v0.1.0 | /Users/devalexanderdaza/Laboratory/GitHub/devalexanderdaza/bmad-any/skills/graphify-integration/ | Referenced by AGENTS.md |
-| CLaude.md | /Users/devalexanderdaza/Laboratory/GitHub/devalexanderdaza/bmad-any/CLAUDE.md | |
-| .cursorrules | /Users/devalexanderdaza/Laboratory/GitHub/devalexanderdaza/bmad-any/.cursorrules | |
-| copilot-instructions.md | /Users/devalexanderdaza/Laboratory/GitHub/devalexanderdaza/bmad-any/.github/copilot-instructions.md | |
+| AGENTS.md | AGENTS.md | Index — references skills below |
+| bmad-agent-patterns v1.0.0 | skills/bmad-agent-patterns/ | Referenced by AGENTS.md |
+| bmad-method v6.6.0 | skills/bmad-method/ | Referenced by AGENTS.md |
+| gentle-ai-integration v0.1.0 | skills/gentle-ai-integration/ | Referenced by AGENTS.md |
+| graphify-integration v0.1.0 | skills/graphify-integration/ | Referenced by AGENTS.md |
+| CLaude.md | CLAUDE.md | |
+| .cursorrules | .cursorrules | |
+| copilot-instructions.md | .github/copilot-instructions.md | |
 
 Read the convention files listed above for project-specific patterns and rules. All referenced paths have been extracted — no need to read index files to discover more.
