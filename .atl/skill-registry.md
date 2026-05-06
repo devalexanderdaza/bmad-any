@@ -17,7 +17,7 @@ See `_shared/skill-resolver.md` for the full resolution protocol.
 | When user asks to create a new skill, add agent instructions, or document patterns for AI | skill-creator | /Users/devalexanderdaza/.claude/skills/skill-creator/SKILL.md |
 | When writing Go tests, using teatest, or adding test coverage | go-testing | /Users/devalexanderdaza/.claude/skills/go-testing/SKILL.md |
 | When user says "judgment day", "judgment-day", "review adversarial", "dual review", "doble review", "juzgar", "que lo juzguen" | judgment-day | /Users/devalexanderdaza/.claude/skills/judgment-day/SKILL.md |
-| /graphify | graphify | /Users/devalexanderdaza/.claude/skills/graphify/SKILL.md |
+| /graphify | graphify | /Users/devalexanderdaza/.config/opencode/skills/graphify/SKILL.md |
 | When the user requests to "analyze source for skills" or "discover skill opportunities." | skf-analyze-source | /Users/devalexanderdaza/Laboratory/GitHub/devalexanderdaza/bmad-any/.claude/skills/skf-analyze-source/SKILL.md |
 | When the user requests to "audit a skill" or "audit skill" for drift. | skf-audit-skill | /Users/devalexanderdaza/Laboratory/GitHub/devalexanderdaza/bmad-any/.claude/skills/skf-audit-skill/SKILL.md |
 | Design a skill scope through guided discovery. Use when the user requests to "create a skill brief" or "brief a skill". | skf-brief-skill | /Users/devalexanderdaza/Laboratory/GitHub/devalexanderdaza/bmad-any/.claude/skills/skf-brief-skill/SKILL.md |
