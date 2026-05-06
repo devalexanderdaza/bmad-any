@@ -69,19 +69,33 @@ def parse_args():
 
 
 def load_yaml_file(path: str) -> dict:
-    """Load a YAML file, returning empty dict if file doesn't exist."""
+    """Load a YAML file, returning empty dict for missing/non-dict content."""
     file_path = Path(path)
     if not file_path.exists():
         return {}
-    with open(file_path, "r", encoding="utf-8") as f:
-        content = yaml.safe_load(f)
-    return content if content else {}
+    try:
+        with open(file_path, "r", encoding="utf-8") as f:
+            content = yaml.safe_load(f)
+    except yaml.YAMLError as exc:
+        print(f"Error: Invalid YAML in {path}: {exc}", file=sys.stderr)
+        sys.exit(1)
+    return content if isinstance(content, dict) else {}
 
 
 def load_json_file(path: str) -> dict:
     """Load a JSON file."""
-    with open(path, "r", encoding="utf-8") as f:
-        return json.load(f)
+    try:
+        with open(path, "r", encoding="utf-8") as f:
+            content = json.load(f)
+    except (FileNotFoundError, json.JSONDecodeError) as exc:
+        print(f"Error: Could not load JSON from {path}: {exc}", file=sys.stderr)
+        sys.exit(1)
+
+    if not isinstance(content, dict):
+        print(f"Error: Expected JSON object in {path}", file=sys.stderr)
+        sys.exit(1)
+
+    return content
 
 
 # Keys that live at config root (shared across all modules)
