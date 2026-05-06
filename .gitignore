@@ -52,6 +52,9 @@ dist/
 
 # Graph & Cache
 graphify-out/cache/
+graphify-out/.chunk_*.txt
+graphify-out/.graphify_*
+graphify-out/cost.json
 *.json.bak
 .graphify-cache/
 
