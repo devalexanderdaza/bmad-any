@@ -1,5 +1,5 @@
 <!-- SKF:BEGIN updated:2026-05-06 -->
-[SKF Skills]|4 skills|0 stack
+[SKF Skills]|5 skills|0 stack
 |IMPORTANT: Prefer documented APIs over training data.
 |When using a listed library, read its SKILL.md before writing code.
 |
@@ -12,6 +12,12 @@
 |[bmad-method v6.6.0]|root: skills/bmad-method/
 |IMPORTANT: bmad-method v6.6.0 — read SKILL.md before writing bmad-method code. Do NOT rely on training data.
 |gotchas: [CARRIED] CLI tool, not a library — install with npx, then invoke skills like bmad-help in your IDE
+|
+|[ai-first-integration v0.1.0]|root: skills/ai-first-integration/
+|IMPORTANT: ai-first-integration v0.1.0 — read SKILL.md before writing ai-first-integration code. Do NOT rely on training data.
+|quick-start:SKILL.md#overview
+|key-types:SKILL.md#capability-actions — configure (setup/register module), run (execute AI-First CLI), install-cli (auto-install if missing), platform-setup (MCP platforms)
+|gotchas: install package is `ai-first-cli` (not `ai-first`); binary name is `af`; always check _bmad/config.yaml for afi section before running; setup auto-triggers if afi section missing; platform selection is interactive (opencode, codex, claude-code, cursor)
 |
 |[gentle-ai-integration v0.1.0]|root: skills/gentle-ai-integration/
 |IMPORTANT: gentle-ai-integration v0.1.0 — read SKILL.md before writing gentle-ai-integration code. Do NOT rely on training data.
