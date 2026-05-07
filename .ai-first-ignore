@@ -1,0 +1,36 @@
+# .ai-first-ignore
+# Patterns excluded from ai-first scanning (one per line, no globs with ** supported)
+# Docs: https://github.com/anomalyco/ai-first-cli
+
+# --- Output & generated dirs ---
+ai-context
+_bmad-output
+graphify-out
+forge-data
+_skf-learn
+
+# --- bmad internals ---
+_bmad/_memory
+_bmad/custom
+
+# --- Skills (massive, not project source code) ---
+skills
+.agents/skills
+.opencode/skills
+
+# --- Lock / cache files ---
+skills-lock.json
+.graphify-cache
+
+# --- Reports & exports ---
+skills/reports
+skills/export-skill-result-20260506-033208.json
+skills/export-skill-result-latest.json
+
+# --- Standard noise ---
+node_modules
+.git
+dist
+build
+__pycache__
+.DS_Store

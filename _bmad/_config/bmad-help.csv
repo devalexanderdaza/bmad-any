@@ -46,6 +46,16 @@ Gentle-AI Integration,gentle-ai-integration,Setup Gentle-AI Integration,GAI,Regi
 Gentle-AI Integration,gentle-ai-integration,Diagnose Gentle-AI,GAID,Detect gentle-ai CLI and report compatibility notes,diagnose,,anytime,gentle-ai-integration:configure,,false,,diagnostic report
 Gentle-AI Integration,gentle-ai-integration,Sync Gentle-AI,GAIS,Run gentle-ai sync to align configs,sync,[gentle-ai args],anytime,gentle-ai-integration:configure,,false,,sync output
 Gentle-AI Integration,gentle-ai-integration,Run Gentle-AI,GAIR,Run a gentle-ai command explicitly,run,[gentle-ai args],anytime,gentle-ai-integration:configure,,false,,command output
+Graphify Integration,_meta,,,,,,,,,false,https://github.com/anomalyco/graphify,
+Graphify Integration,graphify-integration,Setup Graphify Integration,GI,Register graphify integration module and configuration,configure,setup|configure|install,anytime,,,false,,configured module
+Graphify Integration,graphify-integration,Run Graphify,GIR,Run graphify CLI explicitly,run,[graphify args],anytime,graphify-integration:configure,,false,,command output
+AI-First Integration,_meta,,,,,,,,,false,https://github.com/julianperezpesce/ai-first,
+AI-First Integration,ai-first-integration,Setup AI-First Integration,AFI,Register ai-first integration module and configuration,configure,setup|configure|install,anytime,,,false,,configured module
+AI-First Integration,ai-first-integration,Diagnose AI-First,AFID,Detect ai-first CLI and report compatibility notes,diagnose,,anytime,ai-first-integration:configure,,false,,diagnostic report
+AI-First Integration,ai-first-integration,Sync AI-First,AFIS,Run ai-first sync to align configs,sync,[ai-first args],anytime,ai-first-integration:configure,,false,,sync output
+AI-First Integration,ai-first-integration,Run AI-First,AFIR,Run an ai-first command explicitly,run,[ai-first args],anytime,ai-first-integration:configure,,false,,command output
+BMad Agent Patterns,_meta,,,,,,,,,false,,
+BMad Agent Patterns,bmad-agent-patterns,Create Agent Patterns,BAP,"Reference patterns for authoring BMAD agents — roles, triggers, persona rules, task boundaries. Use when creating a new agent, reviewing an existing one for compliance.","","anytime,,,false,skills/bmad-agent-patterns/,agent patterns reference
 Core,_meta,,,,,,,,,false,https://docs.bmad-method.org/llms.txt,
 Core,bmad-brainstorming,Brainstorming,BSP,Use early in ideation or when stuck generating ideas.,,,anytime,,,false,{output_folder}/brainstorming,brainstorming session
 Core,bmad-party-mode,Party Mode,PM,Orchestrate multi-agent discussions when you need multiple perspectives or want agents to collaborate.,,,anytime,,,false,,

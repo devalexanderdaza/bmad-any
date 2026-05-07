@@ -1,0 +1,37 @@
+code: afi
+name: "AI-First Integration"
+description: "Registers AI-First CLI as an invocable BMAD workflow skill."
+module_version: 0.1.0
+default_selected: false
+module_greeting: >
+  AI-First Integration is configured. You can now run ai-first workflows through the ai-first-integration skill.
+
+ai_first_bin:
+  prompt: "AI-First executable"
+  default: "af"
+  example: "af"
+  user_setting: true
+
+ai_first_default_args:
+  prompt: "Default arguments for ai-first run mode"
+  default: ""
+  example: "doctor context"
+  user_setting: true
+
+ai_first_output_dir:
+  prompt: "AI-First output directory"
+  default: "ai-context"
+  result: "{project-root}/{value}"
+  user_setting: false
+
+ai_first_default_root:
+  prompt: "Default repository root for ai-first commands"
+  default: "{project-root}"
+  example: "{project-root}"
+  user_setting: false
+
+ai_first_http_port:
+  prompt: "Default HTTP port for ai-first MCP (optional)"
+  default: "3847"
+  example: "3847"
+  user_setting: true

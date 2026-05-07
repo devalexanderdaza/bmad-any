@@ -3,3 +3,13 @@ Gentle-AI Integration,gentle-ai-integration,Setup Gentle-AI Integration,GAI,Regi
 Gentle-AI Integration,gentle-ai-integration,Diagnose Gentle-AI,GAID,Detect gentle-ai CLI and report compatibility notes,diagnose,,anytime,gentle-ai-integration:configure,,false,,diagnostic report
 Gentle-AI Integration,gentle-ai-integration,Sync Gentle-AI,GAIS,Run gentle-ai sync to align configs,sync,[gentle-ai args],anytime,gentle-ai-integration:configure,,false,,sync output
 Gentle-AI Integration,gentle-ai-integration,Run Gentle-AI,GAIR,Run a gentle-ai command explicitly,run,[gentle-ai args],anytime,gentle-ai-integration:configure,,false,,command output
+AI-First Integration,ai-first-integration,Setup AI-First Integration,AFI,Register ai-first integration module and configuration,configure,setup|configure|install,anytime,,,false,ai_first_output_dir,configured module
+AI-First Integration,ai-first-integration,Diagnose AI-First,AFID,Detect ai-first CLI and report local readiness,diagnose,,anytime,ai-first-integration:configure,,false,ai_first_output_dir,diagnostic report
+AI-First Integration,ai-first-integration,Generate AI Context,AFIG,Run ai-first init to generate ai-context artifacts,generate,,anytime,ai-first-integration:configure,,false,ai_first_output_dir,ai-context artifacts
+AI-First Integration,ai-first-integration,Verify AI Context,AFIV,Run ai-first verify ai-context to return trust status,verify,,anytime,ai-first-integration:configure,,false,ai_first_output_dir,verification output
+AI-First Integration,ai-first-integration,Task Context,AFIC,Run ai-first context for a specific task,context,[task],anytime,ai-first-integration:configure,,false,ai_first_output_dir,task context output
+AI-First Integration,ai-first-integration,Understand Topic,AFIU,Run ai-first understand for a topic or flow,understand,[topic],anytime,ai-first-integration:configure,,false,ai_first_output_dir,topic understanding output
+AI-First Integration,ai-first-integration,MCP Doctor,AFIM,Run ai-first mcp doctor to check MCP setup,mcp-doctor,,anytime,ai-first-integration:configure,,false,ai_first_output_dir,mcp diagnostic output
+AI-First Integration,ai-first-integration,Run AI-First,AFIR,Run ai-first command explicitly,run,[ai-first args],anytime,ai-first-integration:configure,,false,ai_first_output_dir,command output
+Graphify Integration,graphify-integration,Setup Graphify Integration,GFI,Register graphify integration module and configuration,configure,setup|configure|install,anytime,,,true,graphify_output_dir,configured module
+Graphify Integration,graphify-integration,Run Graphify,GFIR,Run graphify CLI to generate or update project graph artifacts,run,[graphify args],anytime,graphify-integration:configure,,false,graphify_output_dir,graph report and wiki artifacts

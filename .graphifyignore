@@ -1,0 +1,47 @@
+# .graphifyignore
+# Gitignore-style patterns for graphify knowledge graph analysis.
+# Supports negation (!pattern) and last-match-wins semantics.
+# Reference: graphify detect.py / _load_graphifyignore
+
+# --- Generated & output dirs ---
+ai-context/
+_bmad-output/
+forge-data/
+_skf-learn/
+graphify-out/
+
+# --- bmad internal state (memory, user config) ---
+_bmad/_memory/
+_bmad/custom/
+
+# --- Skills directories (bulk markdown, not project source) ---
+# Included selectively below via negation for key files only
+skills/
+.agents/skills/
+.opencode/skills/
+
+# Re-include top-level skill metadata (useful for graph context)
+!skills/*/metadata.json
+!skills/*/SKILL.md
+
+# --- Lock & cache ---
+skills-lock.json
+.graphify-cache/
+
+# --- Reports & exports ---
+skills/reports/
+skills/export-skill-result-*.json
+
+# --- Docs (large, contextual but not code graph relevant) ---
+docs/
+
+# --- Standard noise ---
+node_modules/
+.git/
+dist/
+build/
+__pycache__/
+.DS_Store
+*.log
+*.tmp
+*.bak
