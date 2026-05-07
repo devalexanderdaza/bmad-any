@@ -19,13 +19,14 @@ set -euo pipefail
 REPO_URL="https://github.com/devalexanderdaza/bmad-any.git"
 BRANCH="main"
 
-ALL_SKILLS="bmad-agent-patterns gentle-ai-integration graphify-integration"
+ALL_SKILLS="bmad-agent-patterns gentle-ai-integration graphify-integration ai-first-integration"
 
 skill_source() {
   case "$1" in
     bmad-agent-patterns)   echo "skills/bmad-agent-patterns/1.0.0/bmad-agent-patterns" ;;
     gentle-ai-integration) echo "skills/gentle-ai-integration" ;;
     graphify-integration)  echo "skills/graphify-integration" ;;
+    ai-first-integration)  echo "skills/ai-first-integration" ;;
     *) echo "" ;;
   esac
 }

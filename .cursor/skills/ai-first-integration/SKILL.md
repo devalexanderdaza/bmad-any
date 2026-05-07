@@ -50,22 +50,32 @@ This skill supports two modes:
      - `ai_first_default_root={project-root}`
 4. Verify AI-First executable:
    - Run `command -v <ai_first_bin>`.
-   - If found, proceed to action execution.
+   - If found, run `<ai_first_bin> --version`.
    - If not found (first detection):
      a. Inform the user clearly: "`af` (ai-first-cli) was not found on this system."
      b. Load `./assets/install-guide.md` for reference.
      c. Offer to install immediately: ask the user "Do you want me to install ai-first-cli now via `npm install -g ai-first-cli`?"
-     d. If user confirms → run `npm install -g ai-first-cli`, then re-verify with `command -v af`.
-     e. If install succeeds → continue with normal flow.
-     f. If user declines install → present manual install guide and stop.
+     d. If user confirms → run `npm install -g ai-first-cli`, then re-verify with `command -v af && af --version`.
+     e. If install succeeds → continue with normal flow; proceed to platform selection (step 4f).
+     f. **Platform selection (interactive)**:
+        - Ask the user which MCP platforms they want to configure. Present available options:
+          - `opencode`
+          - `codex`
+          - `claude-code`
+          - `cursor`
+          - All of the above
+          - None / skip
+        - For each selected platform, run: `af install --platform <platform>`.
+        - After all installs, run `af mcp doctor --json` and summarize results.
+     g. If user declines install → present manual install guide and stop.
 5. Execute mapped action:
-   - `diagnose`: run `<ai_first_bin> doctor --ci` to check repository quality gates and AI readiness.
-   - `generate`: run `<ai_first_bin> init --root <ai_first_default_root>` to generate ai-context artifacts.
-   - `verify`: run `<ai_first_bin> verify ai-context --json --root <ai_first_default_root>` to audit context trust score (0-100).
-   - `context`: run `<ai_first_bin> context --task "<user-task>" --format markdown --root <ai_first_default_root>` for task-specific context.
-   - `understand`: run `<ai_first_bin> understand "<user-topic>" --format markdown --root <ai_first_default_root>` to understand a topic/flow.
-   - `mcp-doctor`: run `<ai_first_bin> mcp doctor --json --root <ai_first_default_root>` to diagnose MCP setup.
-   - `run`: run `<ai_first_bin> <user-args>` (user args required; passed through to af CLI).
+   - `diagnose`: run detection-only summary (`<ai_first_bin> --version` and suggested next commands).
+   - `generate`: run `<ai_first_bin> init --root <ai_first_default_root>`.
+   - `verify`: run `<ai_first_bin> verify ai-context --json --root <ai_first_default_root>`.
+   - `context`: run `<ai_first_bin> context --task "<user-task>" --format markdown --root <ai_first_default_root>`.
+   - `understand`: run `<ai_first_bin> understand "<user-topic>" --format markdown --root <ai_first_default_root>`.
+   - `mcp-doctor`: run `<ai_first_bin> mcp doctor --json --root <ai_first_default_root>`.
+   - `run`: run `<ai_first_bin> <user-args>` (user args required).
 6. Summarize outcome:
    - Confirm command used, output location, and next suggested command.
 
@@ -73,43 +83,35 @@ This skill supports two modes:
 
 - `install-cli`:
   - Triggered when `af` binary is not found.
-  - Offers to install `ai-first-cli` via npm immediately: `npm install -g ai-first-cli`.
-  - If accepted, runs install and re-verifies binary availability.
+  - Offers to install `ai-first-cli` via npm immediately.
+  - If accepted, runs install and re-verifies.
+  - Then runs interactive platform selection.
 - `platform-setup`:
   - Interactive: presents list of available MCP platforms (`opencode`, `codex`, `claude-code`, `cursor`).
   - Allows user to select one, many, or all.
-  - For each selected, runs: `af install --platform <platform>`.
-  - Finalizes with `af mcp doctor --json` to verify readiness.
+  - Runs `af install --platform <platform>` for each selected.
+  - Finalizes with `af mcp doctor --json` to confirm readiness.
 - `configure`:
   - Triggered by setup/configure/install intent.
   - Runs module registration flow in `./assets/module-setup.md`.
 - `diagnose`:
-  - Run quality gates and AI readiness checks: `af doctor --ci`.
-  - Summarizes repository quality, test coverage, build config, security and CI setup.
+  - Detect AI-First and show version plus recommended commands.
 - `generate`:
-  - Generate `ai-context/` folder with architecture, symbols, entrypoints, dependencies, and AI rules.
-  - Runs `af init` to produce 20+ machine-readable and human-readable artifacts.
+  - Generate `ai-context/` for the target repository.
 - `verify`:
-  - Audit generated `ai-context/` and return trust score (0-100).
-  - Checks manifest freshness, required files, stack evidence, and confidence.
+  - Verify generated ai-context trust score.
 - `context`:
-  - Get task-specific context: run `af context --task "<description>" --format markdown`.
-  - Combines symbols, tests, modules, risks, and git activity for the given task.
+  - Get task-specific context via `af context --task ...`.
 - `understand`:
-  - Understand a topic or auth flow: run `af understand "<topic>" --format markdown`.
-  - Gathers code, tests, architecture, git and risk context for the specified topic.
+  - Get topic/flow understanding via `af understand ...`.
 - `mcp-doctor`:
-  - Diagnose local MCP setup: run `af mcp doctor --json`.
-  - Checks platform config, server readiness, and compatibility issues.
+  - Diagnose local MCP readiness with `af mcp doctor`.
 - `run`:
   - Execute AI-First CLI with explicit user-provided args.
-  - Useful for advanced commands or new af CLI features not yet mapped as dedicated actions.
 
 ## Notes
 
 - Keep this integration non-destructive by default.
 - `install-cli` and `platform-setup` require explicit user confirmation before running any install command.
 - Do not auto-install `ai-first-cli` or mutate MCP client profile files without user consent.
-- AI-First v1.5+ is required. Check [ai-first-cli](https://www.npmjs.com/package/ai-first-cli) on npm.
-- All commands support `--root` to target a different repository. Defaults to `{project-root}`.
-- Output format defaults to markdown for human readability; pass `--json` for machine parsing (except `init`).
+- Platform list is sourced from `af install --list`; the documented platforms for this version are: `opencode`, `codex`, `claude-code`, `cursor`.
