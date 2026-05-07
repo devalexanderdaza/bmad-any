@@ -8,3 +8,19 @@ gai:
   default_selected: false
   gentle_ai_bin: gentle-ai
   gentle_ai_default_args: ''
+afi:
+  name: AI-First Integration
+  description: Registers AI-First CLI as an invocable BMAD workflow skill.
+  version: 0.1.0
+  default_selected: false
+  ai_first_bin: af
+  ai_first_default_args: ''
+  ai_first_output_dir: '{project-root}/ai-context'
+  ai_first_default_root: '{project-root}'
+  ai_first_http_port: '3847'
+gfi:
+  name: Graphify Integration
+  description: Registers Graphify as an invocable BMAD workflow skill.
+  version: 0.1.0
+  default_selected: false
+  graphify_output_dir: '{project-root}/graphify-out'

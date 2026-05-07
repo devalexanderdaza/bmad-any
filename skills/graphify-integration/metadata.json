@@ -7,7 +7,7 @@
   "source_root": "/Users/devalexanderdaza/Laboratory/GitHub/devalexanderdaza/bmad-any",
   "source_commit": "local",
   "source_ref": "main",
-  "confidence_tier": "Quick",
+  "confidence_tier": "Forge",
   "spec_version": "1.3",
   "generation_date": "2026-05-06T00:00:00Z",
   "description": "Registers and runs Graphify CLI as a BMAD-invocable workflow. Use when the user asks to run graphify, build/update the graph report, or configure graphify integration.",
